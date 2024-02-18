@@ -3,7 +3,7 @@ services:
     build:
       context: ./python
     ports:
-      - "5000:5000"
+      - "5000:5001"
     environment:
       - DB_NAME=dbname
       - DB_USER=youruser
