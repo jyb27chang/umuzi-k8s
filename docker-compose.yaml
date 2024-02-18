@@ -1,0 +1,37 @@
+services:
+  flask-app:
+    build:
+      context: ./python
+    ports:
+      - "5000:5000"
+    environment:
+      - DB_NAME=dbname
+      - DB_USER=youruser
+      - DB_PASSWORD=yourpassword
+      - DB_HOST=postgres
+    depends_on:
+      - postgres
+    command: bash -c 'sleep 10 && python app.py'
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - flask-app      
+    # mount the TLS certificates from the host machine to the container
+    # change <your-domain> to the domain given to you by Umuzi
+    volumes:
+      - /etc/letsencrypt/live/<your-domain>/fullchain.pem:/etc/letsencrypt/live/example.com/fullchain.pem
+      - /etc/letsencrypt/live/<your-domain>/privkey.pem:/etc/letsencrypt/live/example.com/privkey.pem
+      - /etc/ssl/certs/dhparam.pem:/etc/ssl/certs/dhparam.pem
+      
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: dbname
+      POSTGRES_USER: youruser
+      POSTGRES_PASSWORD: yourpassword
