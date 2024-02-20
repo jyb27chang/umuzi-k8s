@@ -1,14 +1,11 @@
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
-  name: nginx-service
-spec:
-  # connects the Service and the Pod
-  # the Pod should have a label app=nginx
-  # we will fix that in a bit
-  selector:
+  name: nginx-pod
+  # same value in the Service.spec.selector
+  labels:
     app: nginx
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
