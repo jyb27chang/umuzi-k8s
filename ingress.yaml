@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+spec:
+  rules:
+    # replace with your domain
+    - host: brightc.k8s-course.co.za
+      http:
+        paths:
+          # URL path pointing to the Nginx Pod
+          - path: /nginx
+            pathType: Prefix
+            backend:
+              # connects to the Service we just created
+              service:
+                name: nginx-service
+                port:
+                  number: 80
