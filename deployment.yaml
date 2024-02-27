@@ -15,5 +15,5 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx-container:nginx
+      - name: nginx-container
         image: nginx:alpine3.18
