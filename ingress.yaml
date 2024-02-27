@@ -9,7 +9,7 @@ spec:
       http:
         paths:
           # URL path pointing to the Nginx Pod
-          - path: /nginx
+          - path: /
             pathType: Prefix
             backend:
               # connects to the Service we just created
