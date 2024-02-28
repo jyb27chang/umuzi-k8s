@@ -3,4 +3,4 @@ controller:
     certManager:
       enabled: "true"
   service:
-    externalIPs: ["13.246.225.130ubuntu@ip-172-31-32-167"]
+    externalIPs: ["172-31-32-167"]
