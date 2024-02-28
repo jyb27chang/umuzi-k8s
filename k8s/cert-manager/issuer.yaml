@@ -7,7 +7,7 @@ spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     # replace with your own email
-    email: <your-email>
+    email: jyb27chang@hotmail.com
     
     # secret resource that will be used to store the account's private key
     privateKeySecretRef:
