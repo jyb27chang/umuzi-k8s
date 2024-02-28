@@ -11,7 +11,7 @@ expose:
       secretName: "harbor"
   ingress:
     hosts:
-      core: harbor.<your-domain>
+      core: harbor.brightc.k8s-course.co.za
     controller: default
     kubeVersionOverride: ""
     className: "nginx"
