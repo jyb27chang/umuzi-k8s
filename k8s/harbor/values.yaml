@@ -1,5 +1,5 @@
 harborAdminPassword: "harbor12345"
-externalURL: brightc.k8s-course.co.za
+externalURL: https://harbor.brightc.k8s-course.co.za
 expose:
   type: ingress
   tls:
