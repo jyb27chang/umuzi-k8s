@@ -1,0 +1,20 @@
+harborAdminPassword: "harbor12345"
+externalURL: brightc.k8s-course.co.za
+expose:
+  type: ingress
+  tls:
+    enabled: true
+    certSource: auto
+    auto:
+      commonName: ""
+    secret:
+      secretName: "harbor"
+  ingress:
+    hosts:
+      core: harbor.<your-domain>
+    controller: default
+    kubeVersionOverride: ""
+    className: "nginx"
+    annotations:
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
