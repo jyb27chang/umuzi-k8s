@@ -17,4 +17,4 @@ spec:
         # remember to point to your own Harbor instance!
         image: harbor.brightc.k8s-course.co.za/application/nginx:v2
       imagePullSecrets:
-        - name: my-regcred
+        - name: your-regcred
