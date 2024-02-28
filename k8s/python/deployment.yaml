@@ -42,4 +42,4 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 10
       imagePullSecrets:
-        - name: your-regcred
+        - name: my-regcred
