@@ -12,12 +12,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    # change it to, well, your domain
     - brightc.k8s-course.co.za
     # here is where the TLS certs will be stored
     secretName: nginx-tls-secret
   rules:
-  # change it to, well, your domain
   - host: brightc.k8s-course.co.za
     http:
       paths:
@@ -29,8 +27,6 @@ spec:
             name: nginx-service
             port:
               number: 80
-      # add this to your file
-      # be careful with identation, YAML is very strict about it
       - path: /api
         pathType: Prefix
         backend:
