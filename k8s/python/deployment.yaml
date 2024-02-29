@@ -27,7 +27,7 @@ spec:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: postgresql-credentials
+              name: postgresql
               key: password
         livenessProbe:
           httpGet:
