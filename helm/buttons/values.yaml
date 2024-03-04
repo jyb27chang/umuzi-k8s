@@ -16,8 +16,9 @@ ingress:
           service:
             name: nginx
             port: 80
-        - path: # add your prefix here for the backend
-          pathType: backendpath
+        # add your prefix here for the backend
+        - path: backendpath 
+          pathType: Prefix
           service:
             name: backendservice # your backend service name
             port: 5003 # what port do you want to forward traffic on your backend?
