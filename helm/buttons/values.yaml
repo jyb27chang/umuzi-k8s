@@ -25,4 +25,4 @@ ingress:
   tls: 
    - secretName: nginx-tls-secret
      hosts:
-       - brightcbuttons.k8s-course.co.za # what is the domain you should use here?
+       - brightcs.k8s-course.co.za # what is the domain you should use here?
