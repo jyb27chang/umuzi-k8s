@@ -17,7 +17,7 @@ ingress:
             name: nginx
             port: 80
         # add your prefix here for the backend
-        - path: backendpath 
+        - path: /backendpath 
           pathType: Prefix
           service:
             name: backendservice # your backend service name
