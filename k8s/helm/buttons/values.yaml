@@ -1,0 +1,14 @@
+cd /home/ubuntu/umuzi-k8s/helm
+
+# generates the file using the chart templates
+# empty for now, since we don't have any, yet!
+helm template buttons
+
+# runs the dry-run process, showing what will be installed but doing nothing
+helm install buttons buttons --dry-run --debug
+
+# installs the helm chart
+helm install buttons buttons
+
+# lists the installed helm charts
+helm list
