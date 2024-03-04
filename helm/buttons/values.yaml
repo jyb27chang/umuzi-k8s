@@ -20,8 +20,8 @@ ingress:
         - path: /backendpath
           pathType: Prefix
           service:
-            name: backendservice # your backend service name
-            port: 5003 # what port do you want to forward traffic on your backend?
+            name: my-backend-service # your backend service name
+            port: 80 # what port do you want to forward traffic on your backend?
   tls: 
    - secretName: nginx-tls-secret
-     hosts:
+     hosts: brightc.k8s-course.co.za
