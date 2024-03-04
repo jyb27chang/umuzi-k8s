@@ -24,4 +24,5 @@ ingress:
             port: 80 # what port do you want to forward traffic on your backend?
   tls: 
    - secretName: nginx-tls-secret
-     hosts: brightc.k8s-course.co.za
+     hosts:
+       - brightc.k8s-course.co.za # what is the domain you should use here?
